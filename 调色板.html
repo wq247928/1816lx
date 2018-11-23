@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>调色板</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="number" v-model="width">
+			<input type="number" v-model="height">
+			
+			<input type="color" v-model="bg">
+			<div class="color" :style="{
+				width:width+'px',
+				height:height+'px',
+				background:bg
+				
+			}">钢铁直男</div>
+		</div>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				width:200,
+				height:200,
+				r:0,
+				g:0,
+				b:0,
+				bg:'#a7d8c3'
+			}
+		})
+	</script>
+	</body>
+</html>
